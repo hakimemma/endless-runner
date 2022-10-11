@@ -5,8 +5,9 @@ using UnityEngine;
 public class parallaz : MonoBehaviour
 {
     GameObject player;
-    Renderer Rend;
-    float playerstartPos;
+    Renderer rend;
+    float playerStartPos;
+    public float speed = 5.0f;
     void Start()
     {
         player = GameObject.Find("player");
@@ -19,6 +20,6 @@ public class parallaz : MonoBehaviour
     {
         float offset = (player.transform.position.x - playerStartPos) * speed;
 
-        Rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0f));
+        rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0f));
     }
 }
