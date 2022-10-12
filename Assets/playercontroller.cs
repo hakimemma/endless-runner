@@ -32,7 +32,7 @@ public class playercontroller : MonoBehaviour
 
         //change the X velocity of the Rigidbody2D to be equal to the moment value
         playerObject.velocity = new Vector2(movementValueX * maxSpeed, playerObject.velocity.y);
-        playerObject.AddForce(new Vector2(0f, movementValueY));
+        playerObject.velocity = new Vector2(playerObject.velocity.x, movementValueY * maxSpeed );
 
 
         //check to see if the ground check object is touching the ground
